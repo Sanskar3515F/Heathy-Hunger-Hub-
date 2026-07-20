@@ -37,7 +37,7 @@ Then, run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open https://heathy-hunger-hub-eh1k.vercel.app/ with your browser to see the result.
 
 ---
 
