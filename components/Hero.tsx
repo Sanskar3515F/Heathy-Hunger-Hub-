@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { MapPin, Phone, MessageCircle, Sparkles } from "lucide-react";
+import { MapPin, Sparkles } from "lucide-react";
 import { business } from "@/data/business";
-import { waLink, telLink, hasPhone, hasWhatsapp } from "@/lib/contact";
 
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -90,26 +89,6 @@ export default function Hero() {
             >
               <MapPin className="h-5 w-5" aria-hidden />
               Get Directions
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-6 flex flex-wrap gap-4 text-sm font-semibold"
-          >
-            <a
-              href={hasPhone ? telLink : "#contact"}
-              className="inline-flex items-center gap-1.5 text-[var(--color-charcoal)]/70 hover:text-[var(--color-forest)]"
-            >
-              <Phone className="h-4 w-4" aria-hidden /> Call Now
-            </a>
-            <a
-              href={hasWhatsapp ? waLink() : "#contact"}
-              className="inline-flex items-center gap-1.5 text-[var(--color-charcoal)]/70 hover:text-[var(--color-forest)]"
-            >
-              <MessageCircle className="h-4 w-4" aria-hidden /> WhatsApp
             </a>
           </motion.div>
         </div>
