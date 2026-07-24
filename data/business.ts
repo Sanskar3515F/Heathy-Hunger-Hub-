@@ -133,7 +133,7 @@ export const menuCategoriesMeta: Record<MenuCategory, { name: string; image: str
   chaat: { name: "Chaat", image: "/images/menu/corn.jpg", description: "Tangy & spicy street style chaat" },
   chips: { name: "BYOB Chips", image: "/images/menu/BYOB.jpg", description: "Build Your Own Bag chips" },
   potato: { name: "Spiral Potato", image: "/images/menu/spiralpotato.jpg", description: "Crispy spiral cut potatoes" },
-  momos: { name: "Momos Fry", image: "/images/menu/momo.jpg", description: "Crispy fried momos" },
+  momos: { name: "Momos Fry", image: "/images/menu/momo.jpg", description: "Crispy fried momos (4 Pcs)" },
   oats: { name: "Protein Oats Bowl", image: "/images/menu/oats.jpg", description: "Healthy & filling oats bowls" },
   breads: { name: "Brown Breads", image: "/images/menu/Brown-Bread.jpg", description: "Nutritious brown bread meals" },
   sprouts: { name: "Healthy Sprouts", image: "/images/menu/spourt.jpg", description: "Fresh & wholesome sprouts" },
@@ -174,10 +174,10 @@ export const menuItems: MenuItem[] = [
 
   // --- MAGGI ---
   {
-    id: "masala-maggie", name: "Masala Maggie", description: "Classic spicy maggi", price: "₹ 60", category: "maggi", image: "/images/menu/maggi.jpg", veg: true
+    id: "masala-maggie", name: "Masala Maggie", description: "Classic spicy maggi", price: "₹ 49", category: "maggi", image: "/images/menu/maggi.jpg", veg: true
   },
   {
-    id: "cheese-maggie", name: "Cheese Maggie", description: "Cheesy and creamy maggi", price: "₹ 90", category: "maggi", image: "/images/menu/Cheese Maggie.jpg", veg: true
+    id: "cheese-maggie", name: "Cheese Maggie", description: "Cheesy and creamy maggi", price: "₹ 79", category: "maggi", image: "/images/menu/Cheese Maggie.jpg", veg: true
   },
 
   // --- CHAAT ---
@@ -209,13 +209,13 @@ export const menuItems: MenuItem[] = [
 
   // --- MOMOS ---
   {
-    id: "veg-momos-fry", name: "Veg Momos Fry", description: "Crispy fried veg momos", price: "₹ 50", category: "momos", image: "/images/menu/momo.jpg", veg: true
+    id: "veg-momos-fry", name: "Veg Momos Fry", description: "Crispy fried veg momos (4 Pcs)", price: "₹ 50", category: "momos", image: "/images/menu/momo.jpg", veg: true
   },
   {
-    id: "paneer-momos-fry", name: "Paneer Momos Fry", description: "Fried paneer filled momos", price: "₹ 60", category: "momos", image: "/images/menu/Paneer Momos Fry.jpg", veg: true
+    id: "paneer-momos-fry", name: "Paneer Momos Fry", description: "Fried paneer filled momos (4 Pcs)", price: "₹ 60", category: "momos", image: "/images/menu/Paneer Momos Fry.jpg", veg: true
   },
   {
-    id: "cheese-momos-fry", name: "Cheese Momos Fry", description: "Fried momos with cheese filling", price: "₹ 70", category: "momos", image: "/images/menu/Cheese Momos Fry.jpg", veg: true
+    id: "cheese-momos-fry", name: "Cheese Momos Fry", description: "Fried momos with cheese filling (4 Pcs)", price: "₹ 70", category: "momos", image: "/images/menu/Cheese Momos Fry.jpg", veg: true
   },
 
   // --- OATS ---
