@@ -14,6 +14,7 @@ import "@fontsource/plus-jakarta-sans/800.css";
 import "./globals.css";
 import { business } from "@/data/business";
 import MobileActionBar from "@/components/MobileActionBar";
+import { Analytics } from "@vercel/analytics/next";
 
 const siteUrl = "https://healthyhungerhub.example"; // TODO: replace with the real production domain
 
@@ -101,6 +102,7 @@ export default function RootLayout({
       <body className="antialiased">
         {children}
         <MobileActionBar />
+        <Analytics />
       </body>
     </html>
   );
