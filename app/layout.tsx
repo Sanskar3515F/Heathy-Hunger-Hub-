@@ -1,59 +1,83 @@
-import type { Metadata } from "next";
-import "@fontsource/fraunces/400.css";
-import "@fontsource/fraunces/500.css";
-import "@fontsource/fraunces/600.css";
-import "@fontsource/fraunces/700.css";
-import "@fontsource/fraunces/900.css";
-import "@fontsource/fraunces/400-italic.css";
-import "@fontsource/fraunces/600-italic.css";
-import "@fontsource/plus-jakarta-sans/400.css";
-import "@fontsource/plus-jakarta-sans/500.css";
-import "@fontsource/plus-jakarta-sans/600.css";
-import "@fontsource/plus-jakarta-sans/700.css";
-import "@fontsource/plus-jakarta-sans/800.css";
+import type { Metadata, Viewport } from "next";
+import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 import { business } from "@/data/business";
 import MobileActionBar from "@/components/MobileActionBar";
 
-const siteUrl = "https://healthyhungerhub.example"; // TODO: replace with the real production domain
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "900"],
+});
+
+const siteUrl = "https://healthyhungerhub.com";
+
+export const viewport: Viewport = {
+  themeColor: "#1f4d3a",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Healthy & Hunger Hub — Rasayani, Mohopada | Healthy Meets Hungry",
+    default: "Healthy & Hunger Hub — 100% Pure Veg | Rasayani, Mohopada",
     template: "%s | Healthy & Hunger Hub",
   },
   description:
-    "Healthy & Hunger Hub in Rasayani (Sebi Rd, Navin Posari, Mohopada) serves fresh healthy bowls and hearty, cravable comfort food under one roof. See our menu, photos, and get directions.",
+    "Healthy & Hunger Hub in Rasayani (Sebi Rd, Navin Posari) is a 100% Pure Veg restaurant serving protein oats bowls, sprouts, smoothies, maggi, burgers, and sandwiches. Explore our menu & get directions.",
   keywords: [
     "Healthy & Hunger Hub",
-    "Rasayani food",
+    "Pure Veg Rasayani",
+    "100% Pure Veg Mohopada",
     "Mohopada restaurant",
     "healthy food Rasayani",
     "fast food Mohopada",
-    "Navi Mumbai eatery",
-    "Sebi Road Rasayani",
+    "Sebi Road Rasayani eatery",
+    "protein shake Rasayani",
   ],
+  authors: [{ name: "Healthy & Hunger Hub" }],
+  creator: "Healthy & Hunger Hub",
+  publisher: "Healthy & Hunger Hub",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Healthy & Hunger Hub — Rasayani, Mohopada",
+    title: "Healthy & Hunger Hub — 100% Pure Veg | Rasayani, Mohopada",
     description:
-      "Healthy Choices. Hungry Cravings. One Hub. Fresh, tasty food made for every craving — in Rasayani, Mohopada.",
+      "Healthy Choices. Hungry Cravings. One Hub. 100% Pure Veg fresh food & quick bites in Rasayani, Mohopada.",
     url: siteUrl,
     siteName: "Healthy & Hunger Hub",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "/images/hero/hero.png", // TODO: replace with a real OG image (1200x630) once photos are added
+        url: "/images/hero/hero.png",
         width: 1200,
         height: 630,
-        alt: "Healthy & Hunger Hub",
+        alt: "Healthy & Hunger Hub — 100% Pure Veg Restaurant",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Healthy & Hunger Hub — Rasayani, Mohopada",
+    title: "Healthy & Hunger Hub — 100% Pure Veg | Rasayani",
     description: "Healthy Choices. Hungry Cravings. One Hub.",
   },
   icons: {
@@ -73,8 +97,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: business.name,
-    servesCuisine: "Indian, Fast Food, Healthy Food",
+    servesCuisine: "Vegetarian, Indian Fast Food, Healthy Food",
     priceRange: "₹₹",
+    telephone: business.contact.phoneDisplay,
     address: {
       "@type": "PostalAddress",
       streetAddress: business.address.line1,
@@ -84,15 +109,16 @@ export default function RootLayout({
       addressCountry: "IN",
     },
     url: siteUrl,
-    // TODO: add "telephone" once the phone number is verified
-    // TODO: add "aggregateRating" once real rating/review counts are verified
-    // TODO: add "image" entries once real photos are added to public/images/
     hasMap: business.google.mapsUrl,
+    image: `${siteUrl}/images/hero/hero.png`,
+    isAcceptingReservations: "True",
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${plusJakartaSans.variable} ${fraunces.variable}`}>
       <head>
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="dns-prefetch" href="https://maps.googleapis.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
