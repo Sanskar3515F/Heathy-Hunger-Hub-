@@ -48,10 +48,16 @@ export default function Navbar() {
             : "bg-white/40 backdrop-blur-sm py-3"
         )}
       >
-        <a href="#home" className="flex items-center gap-2.5 font-display text-lg font-semibold text-[var(--color-forest)]">
-          <Image src="/images/logo/logo.png" alt="" width={40} height={40} className="h-9 w-9 sm:h-10 sm:w-10" aria-hidden />
+        <a href="#home" className="flex items-center gap-2 font-display text-base sm:text-lg font-semibold text-[var(--color-forest)]">
+          <Image src="/images/logo/logo.png" alt="" width={40} height={40} className="h-9 w-9 sm:h-10 sm:w-10 shrink-0" aria-hidden />
           <span className="leading-tight">
             Healthy<span className="text-[var(--color-amber)]"> &amp; </span>Hunger Hub
+          </span>
+          <span className="hidden xl:inline-flex items-center gap-1 rounded-full border border-green-600/30 bg-green-50 px-2 py-0.5 text-[10px] font-bold text-green-700">
+            <span className="flex h-2.5 w-2.5 items-center justify-center rounded-[1px] border border-green-600 bg-white">
+              <span className="h-1 w-1 rounded-full bg-green-600"></span>
+            </span>
+            Pure Veg
           </span>
         </a>
 
@@ -83,7 +89,7 @@ export default function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="grid h-10 w-10 place-items-center rounded-full bg-[var(--color-forest)] text-white lg:hidden"
+          className="grid h-10 w-10 place-items-center rounded-full bg-[var(--color-forest)] text-white lg:hidden shrink-0"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -99,6 +105,17 @@ export default function Navbar() {
             transition={{ duration: 0.22, ease: "easeOut" }}
             className="mx-4 mt-2 rounded-3xl bg-white p-6 shadow-[var(--shadow-soft)] lg:hidden"
           >
+            {/* Pure Veg Banner in Mobile Drawer */}
+            <div className="mb-4 flex items-center gap-2 rounded-2xl bg-green-50 px-4 py-2.5 border border-green-200">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-[3px] border-2 border-green-600 bg-white">
+                <span className="h-3 w-3 rounded-full bg-green-600"></span>
+              </span>
+              <div>
+                <p className="text-xs font-bold text-green-800 uppercase tracking-wide">100% Pure Veg Restaurant</p>
+                <p className="text-[11px] text-green-700/80">Fresh &amp; Hygienic Preparation</p>
+              </div>
+            </div>
+
             <nav className="flex flex-col gap-1" aria-label="Mobile">
               {NAV_LINKS.map((link, i) => (
                 <motion.a

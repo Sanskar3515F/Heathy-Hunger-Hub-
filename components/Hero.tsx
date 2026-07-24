@@ -30,10 +30,19 @@ export default function Hero() {
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--color-forest)]/10 px-4 py-2 text-sm font-semibold text-[var(--color-forest)]"
+            className="inline-flex flex-wrap items-center gap-2 rounded-full bg-[var(--color-forest)]/10 px-4 py-2 text-xs sm:text-sm font-semibold text-[var(--color-forest)]"
           >
-            <Sparkles className="h-4 w-4" aria-hidden />
-            Fresh • Tasty • Made for Every Craving
+            <span className="flex items-center gap-1.5 rounded-full bg-white px-2.5 py-0.5 text-xs font-bold text-green-700 shadow-sm border border-green-600/30">
+              <span className="flex h-3.5 w-3.5 items-center justify-center rounded-[2px] border border-green-600 bg-white">
+                <span className="h-1.5 w-1.5 rounded-full bg-green-600"></span>
+              </span>
+              100% Pure Veg
+            </span>
+            <span className="hidden sm:inline">•</span>
+            <span className="flex items-center gap-1">
+              <Sparkles className="h-4 w-4 text-[var(--color-amber)]" aria-hidden />
+              Fresh • Tasty • Made for Every Craving
+            </span>
           </motion.div>
 
           <motion.h1
@@ -109,28 +118,30 @@ export default function Hero() {
           initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="relative"
+          className="relative mt-4 lg:mt-0"
         >
           <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-[2.5rem] shadow-[var(--shadow-soft)]">
             <Image
               src="/images/hero/hero.png"
-              alt="Placeholder — replace with a real hero photo of Healthy & Hunger Hub's signature dish"
+              alt="Healthy & Hunger Hub 100% Pure Veg food presentation"
               fill
               priority
               sizes="(max-width: 1024px) 90vw, 480px"
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white px-5 py-4 shadow-[var(--shadow-soft)] sm:block">
-            <p className="font-display text-2xl font-bold text-[var(--color-forest)]">100%</p>
-            <p className="text-xs font-semibold text-[var(--color-charcoal)]/60">Made fresh to order*</p>
+          {/* 100% Fresh Badge - visible on mobile and desktop */}
+          <div className="absolute bottom-3 left-3 z-10 flex flex-col justify-center rounded-2xl bg-white/95 px-3.5 py-2.5 shadow-lg backdrop-blur-md border border-amber-100 sm:-bottom-6 sm:-left-6 sm:px-5 sm:py-4">
+            <p className="font-display text-xl font-bold text-[var(--color-forest)] sm:text-2xl">100%</p>
+            <p className="text-xs font-semibold text-[var(--color-charcoal)]/70">Made fresh to order*</p>
           </div>
-          <div className="absolute -top-6 -right-6 hidden rounded-2xl bg-white px-4 py-3 shadow-[var(--shadow-soft)] sm:flex items-center gap-3">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[3px] border-2 border-green-600 bg-white" title="100% Pure Veg">
-              <span className="block h-4 w-4 rounded-full bg-green-600"></span>
+          {/* Pure Veg Badge - visible on mobile and desktop */}
+          <div className="absolute top-3 right-3 z-10 flex items-center gap-2.5 rounded-2xl bg-white/95 px-3.5 py-2.5 shadow-lg backdrop-blur-md border border-emerald-100 sm:-top-6 sm:-right-6 sm:px-4 sm:py-3">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[3px] border-2 border-green-600 bg-white sm:h-8 sm:w-8" title="100% Pure Veg">
+              <span className="block h-3.5 w-3.5 rounded-full bg-green-600 sm:h-4 sm:w-4"></span>
             </span>
             <div>
-              <p className="font-display text-lg font-bold text-[var(--color-forest)] leading-tight">Pure Veg</p>
+              <p className="font-display text-base sm:text-lg font-bold text-[var(--color-forest)] leading-tight">Pure Veg</p>
             </div>
           </div>
         </motion.div>

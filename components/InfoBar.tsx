@@ -58,7 +58,13 @@ export default function InfoBar() {
             )}
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex items-center gap-2 rounded-full bg-green-50 px-4 py-2 text-sm font-bold text-green-700 border border-green-200">
+              <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-[2px] border-2 border-green-600 bg-white">
+                <span className="h-2 w-2 rounded-full bg-green-600"></span>
+              </span>
+              100% Pure Veg
+            </div>
             <ServicePill label="Dine-in" status={business.services.dineIn} icon={UtensilsCrossed} />
             <ServicePill label="Takeaway" status={business.services.takeaway} icon={ShoppingBag} />
             <ServicePill label="Delivery" status={business.services.delivery} icon={Bike} />
