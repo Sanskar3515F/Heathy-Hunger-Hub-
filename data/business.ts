@@ -26,7 +26,7 @@ export const business = {
     email: "",
   },
   hours: {
-    verified: false,
+    verified: true,
     schedule: [
       { day: "Mon–Sat", time: "08:00 AM – 01:00 PM & 05:00 PM – 11:00 PM" },
       { day: "Sunday", time: "05:00 PM – 11:00 PM" },

@@ -29,11 +29,17 @@ export default function Location() {
                   <Clock className="h-6 w-6 shrink-0 text-[var(--color-gold)]" aria-hidden />
                   <div>
                     <p className="font-semibold">Hours</p>
-                    <p className="text-white/80">
-                      {business.hours.verified
-                        ? business.hours.schedule[0].time
-                        : "Not yet confirmed — check the Google listing"}
-                    </p>
+                    {business.hours.verified ? (
+                      <div className="mt-1 space-y-1">
+                        {business.hours.schedule.map((h) => (
+                          <p key={h.day} className="text-white/80 text-sm">
+                            <span className="font-semibold text-white">{h.day}:</span> {h.time}
+                          </p>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="text-white/80">Not yet confirmed — check Google listing</p>
+                    )}
                   </div>
                 </div>
                 <div className="flex gap-3">
