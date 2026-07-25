@@ -98,8 +98,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: business.name,
-    servesCuisine: "Vegetarian, Indian Fast Food, Healthy Food",
-    priceRange: "₹₹",
+    servesCuisine: "Vegetarian, Indian Fast Food, Healthy Food, Protein Bowls",
+    priceRange: "₹",
     telephone: business.contact.phoneDisplay,
     address: {
       "@type": "PostalAddress",
@@ -109,6 +109,35 @@ export default function RootLayout({
       postalCode: business.address.pincode,
       addressCountry: "IN",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "18.9015",
+      longitude: "73.1782"
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        opens: "08:00",
+        closes: "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Sunday",
+        opens: "17:00",
+        closes: "23:00"
+      }
+    ],
+    sameAs: [
+      "https://www.instagram.com/healt.hyhungerhub"
+    ],
     url: siteUrl,
     hasMap: business.google.mapsUrl,
     image: `${siteUrl}/images/hero/hero.png`,
