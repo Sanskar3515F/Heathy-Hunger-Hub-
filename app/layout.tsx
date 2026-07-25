@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 import { business } from "@/data/business";
 import MobileActionBar from "@/components/MobileActionBar";
+import { Analytics } from "@vercel/analytics/next";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -127,6 +128,7 @@ export default function RootLayout({
       <body className="antialiased">
         {children}
         <MobileActionBar />
+        <Analytics />
       </body>
     </html>
   );
