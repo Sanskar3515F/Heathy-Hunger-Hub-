@@ -25,30 +25,6 @@ export default function Hero() {
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-8">
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-3 rounded-full bg-emerald-50/80 border border-emerald-100/60 p-1.5 pr-4 text-xs font-semibold text-emerald-950 shadow-sm backdrop-blur-sm"
-          >
-            <span className="flex items-center gap-1.5 rounded-full bg-white px-2.5 py-1 text-[11px] font-bold text-emerald-800 shadow-xs border border-emerald-600/20">
-              <span className="flex h-3 w-3 items-center justify-center rounded-[2px] border border-emerald-600 bg-white">
-                <span className="h-1 w-1 rounded-full bg-emerald-600 animate-pulse"></span>
-              </span>
-              100% Pure Veg
-            </span>
-            <div className="flex items-center gap-2 text-emerald-800/90 font-medium">
-              <Sparkles className="h-3.5 w-3.5 text-amber-500 fill-amber-500/20" aria-hidden />
-              <span className="flex items-center gap-1.5">
-                <span>Fresh</span>
-                <span className="h-1 w-1 rounded-full bg-emerald-300"></span>
-                <span>Tasty</span>
-                <span className="h-1 w-1 rounded-full bg-emerald-300"></span>
-                <span className="text-emerald-700/80 font-normal">Made for Every Craving</span>
-              </span>
-            </div>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
             animate={{ opacity: 1, y: 0 }}
