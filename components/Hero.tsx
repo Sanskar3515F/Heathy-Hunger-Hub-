@@ -29,19 +29,24 @@ export default function Hero() {
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex flex-wrap items-center gap-2 rounded-full bg-[var(--color-forest)]/10 px-4 py-2 text-xs sm:text-sm font-semibold text-[var(--color-forest)]"
+            className="inline-flex items-center gap-3 rounded-full bg-emerald-50/80 border border-emerald-100/60 p-1.5 pr-4 text-xs font-semibold text-emerald-950 shadow-sm backdrop-blur-sm"
           >
-            <span className="flex items-center gap-1.5 rounded-full bg-white px-2.5 py-0.5 text-xs font-bold text-green-700 shadow-sm border border-green-600/30">
-              <span className="flex h-3.5 w-3.5 items-center justify-center rounded-[2px] border border-green-600 bg-white">
-                <span className="h-1.5 w-1.5 rounded-full bg-green-600"></span>
+            <span className="flex items-center gap-1.5 rounded-full bg-white px-2.5 py-1 text-[11px] font-bold text-emerald-800 shadow-xs border border-emerald-600/20">
+              <span className="flex h-3 w-3 items-center justify-center rounded-[2px] border border-emerald-600 bg-white">
+                <span className="h-1 w-1 rounded-full bg-emerald-600 animate-pulse"></span>
               </span>
               100% Pure Veg
             </span>
-            <span className="hidden sm:inline">•</span>
-            <span className="flex items-center gap-1">
-              <Sparkles className="h-4 w-4 text-[var(--color-amber)]" aria-hidden />
-              Fresh • Tasty • Made for Every Craving
-            </span>
+            <div className="flex items-center gap-2 text-emerald-800/90 font-medium">
+              <Sparkles className="h-3.5 w-3.5 text-amber-500 fill-amber-500/20" aria-hidden />
+              <span className="flex items-center gap-1.5">
+                <span>Fresh</span>
+                <span className="h-1 w-1 rounded-full bg-emerald-300"></span>
+                <span>Tasty</span>
+                <span className="h-1 w-1 rounded-full bg-emerald-300"></span>
+                <span className="text-emerald-700/80 font-normal">Made for Every Craving</span>
+              </span>
+            </div>
           </motion.div>
 
           <motion.h1
