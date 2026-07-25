@@ -177,6 +177,30 @@ export default function Menu() {
                           )}
                         </div>
                         <p className="mt-1.5 text-sm text-[var(--color-charcoal)]/65">{item.description}</p>
+                        {item.macros && (
+                          <div className="mt-4 flex flex-wrap gap-2 text-xs">
+                            {item.macros.protein && (
+                              <span className="rounded-md bg-emerald-50 px-2 py-1 font-semibold text-emerald-700 border border-emerald-100">
+                                P: {item.macros.protein}
+                              </span>
+                            )}
+                            {item.macros.fat && (
+                              <span className="rounded-md bg-amber-50 px-2 py-1 font-semibold text-amber-700 border border-amber-100">
+                                F: {item.macros.fat}
+                              </span>
+                            )}
+                            {item.macros.carbs && (
+                              <span className="rounded-md bg-sky-50 px-2 py-1 font-semibold text-sky-700 border border-sky-100">
+                                C: {item.macros.carbs}
+                              </span>
+                            )}
+                            {item.macros.calories && (
+                              <span className="rounded-md bg-rose-50 px-2 py-1 font-semibold text-rose-700 border border-rose-100">
+                                {item.macros.calories}
+                              </span>
+                            )}
+                          </div>
+                        )}
                       </div>
                     </motion.article>
                   ))}
