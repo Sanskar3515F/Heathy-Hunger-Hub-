@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://healthyhungerhub.com/sitemap.xml
+Sitemap: https://heathy-hunger-hub-eh1k.vercel.app/sitemap.xml
