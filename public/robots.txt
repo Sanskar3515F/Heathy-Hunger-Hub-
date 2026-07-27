@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://heathy-hunger-hub-eh1k.vercel.app/sitemap.xml

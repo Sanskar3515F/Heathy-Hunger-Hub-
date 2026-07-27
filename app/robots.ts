@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = "https://healthyhungerhub.example"; // TODO: replace with the real production domain
+  const siteUrl = "https://heathy-hunger-hub-eh1k.vercel.app";
+
   return {
     rules: {
       userAgent: "*",

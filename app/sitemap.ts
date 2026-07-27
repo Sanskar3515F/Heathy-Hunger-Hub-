@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = "https://healthyhungerhub.example"; // TODO: replace with the real production domain
+  const siteUrl = "https://heathy-hunger-hub-eh1k.vercel.app";
+
   return [
     {
       url: siteUrl,
