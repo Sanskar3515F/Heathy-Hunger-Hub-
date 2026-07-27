@@ -45,9 +45,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-md text-lg text-[var(--color-charcoal)]/75"
           >
-            Two cravings, one address in Rasayani. Whether you&apos;re after something
-            light and fresh or something indulgent and filling, Healthy &amp;
-            Hunger Hub has a plate for the mood you&apos;re in.
+            Two cravings, one address in Rasayani. If you&apos;re searching for the best &quot;healthy food near me&quot;, or just want something indulgent and filling, Healthy &amp; Hunger Hub has a plate for the mood you&apos;re in.
           </motion.p>
 
           <motion.div

@@ -30,8 +30,7 @@ export default function About() {
           <div className="mt-5 space-y-4 text-[var(--color-charcoal)]/75">
             <p>
               Healthy &amp; Hunger Hub sits on {business.address.line1} in{" "}
-              {business.address.area}, {business.address.state}. It is a local
-              food spot made for people who want both sides of taste in one
+              {business.address.area}, {business.address.state}. Whether you are a local or just searching for the best &quot;healthy food near me&quot;, our hub is made for people who want both sides of taste in one
               place: lighter healthy choices and satisfying hungry cravings.
             </p>
             <p className="rounded-2xl bg-[var(--color-cream-alt)] p-4 text-sm text-[var(--color-charcoal)]/70">

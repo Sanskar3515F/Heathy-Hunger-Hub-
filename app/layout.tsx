@@ -35,9 +35,11 @@ export const metadata: Metadata = {
     template: "%s | Healthy & Hunger Hub",
   },
   description:
-    "Healthy & Hunger Hub in Rasayani (Sebi Rd, Navin Posari) is a 100% Pure Veg restaurant serving protein oats bowls, sprouts, smoothies, maggi, burgers, and sandwiches. Explore our menu & get directions.",
+    "Looking for healthy food near me? Healthy & Hunger Hub in Rasayani (Sebi Rd, Navin Posari) is a 100% Pure Veg restaurant serving protein oats bowls, sprouts, smoothies, maggi, burgers, and sandwiches. Explore our menu & get directions.",
   keywords: [
     "Healthy & Hunger Hub",
+    "healthy food near me",
+    "best healthy food near me",
     "Pure Veg Rasayani",
     "100% Pure Veg Mohopada",
     "Mohopada restaurant",
@@ -45,6 +47,7 @@ export const metadata: Metadata = {
     "fast food Mohopada",
     "Sebi Road Rasayani eatery",
     "protein shake Rasayani",
+    "healthy restaurants near me",
   ],
   authors: [{ name: "Healthy & Hunger Hub" }],
   creator: "Healthy & Hunger Hub",
