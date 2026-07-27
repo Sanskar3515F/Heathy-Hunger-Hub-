@@ -4,6 +4,7 @@ import "./globals.css";
 import { business } from "@/data/business";
 import MobileActionBar from "@/components/MobileActionBar";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -176,6 +177,7 @@ export default function RootLayout({
         {children}
         <MobileActionBar />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
