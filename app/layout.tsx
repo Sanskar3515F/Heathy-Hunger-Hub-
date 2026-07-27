@@ -20,8 +20,7 @@ const fraunces = Fraunces({
   weight: ["400", "500", "600", "700", "900"],
 });
 
-const siteUrl = "https://healthyhungerhub.com";
-
+const siteUrl = "https://heathy-hunger-hub-eh1k.vercel.app";
 export const viewport: Viewport = {
   themeColor: "#1f4d3a",
   width: "device-width",
