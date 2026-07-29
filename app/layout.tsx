@@ -123,7 +123,7 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   verification: {
-    google: "your-google-verification-code", // replace with your actual code from Search Console
+    google: "2dd56a2443edaadf",
   },
 };
 
